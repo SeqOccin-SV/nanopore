@@ -16,25 +16,13 @@ rule read_stats:
 
 rule align_stats:
     input:
-        bam="mapping/{sample}.{tool}.bam"
+        bam="mapping/{sample}.bam"
     output:
-        directory("stats/align/nanoplot/{sample}.{tool}")
+        directory("stats/align/nanoplot/{sample}")
     threads:
         4
     log:
-        "logs/stats/align/nanoplot/{sample}.{tool}.log"
+        "logs/stats/align/nanoplot/{sample}.log"
     shell:
         "NanoPlot --N50 -t {threads} --bam  {input.bam} "
         " --plots kde dot -o {output} 2> {log}"
-
-rule flagstat:
-    input:
-        bam="mapping/{sample}.{tool}.bam"
-    output:
-        "stats/align/{sample}.{tool}.bam.flagstat"
-    threads:
-        4
-    log:
-        "logs/stats/align/{sample}.{tool}.flagstat.log"
-    shell:
-        "samtools flagstat -@{threads} {input} > {output} 2> {log}"

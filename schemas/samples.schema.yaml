@@ -15,9 +15,3 @@ properties:
 
 required:
   - sample
-
-oneOf:
-  required:
-    - reads
-  required:
-    - bam

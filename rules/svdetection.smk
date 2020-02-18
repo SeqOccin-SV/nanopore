@@ -1,14 +1,14 @@
 
-svim:
+rule svim:
     input:
         "mapping/{sample}.bam"
     output:
-        "detectedsv/{sample}/final_results.vcf.gz"
+        "detectedsv/{sample}/variants.vcf.gz"
     params:
-        genome = config["genome"],
+        genome = get_genome,
         outdir = "detectedsv/{sample}"
     shell:
         """
-        svim {params.outdir} {input} {params.genome}
-        bgzip {params.outdir}/final_results.vcf
+        svim alignment {params.outdir} {input} {params.genome}
+        bgzip {params.outdir}/variants.vcf
         """

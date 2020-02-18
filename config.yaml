@@ -10,6 +10,6 @@ ref:
 # sample  reads|bam
 # sample1  sample1.fastq.gz|sample1.bam
 # Here | means either fastqs are provided or bams
-samplefile: samples.tsv
+samples: samples.tsv
 
 workdir: svdetection

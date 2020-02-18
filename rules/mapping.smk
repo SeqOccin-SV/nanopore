@@ -12,7 +12,7 @@ rule minimap:
     resources:
         mem_mb=30
     params:
-        genome=config["genome"]
+        genome=get_genome
     log:
         "logs/minimap/{sample}.log"
     shell:
