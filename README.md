@@ -5,6 +5,7 @@ Setting up the environment
 ```bash 
 module load bioinfo/minimap2-2.11
 module load bioinfo/samtools-1.9
+module load bioinfo/tabix-0.2.5
 module load system/Python-3.6.3
 python3 -m venv nanoporeenv
 source nanoporeenv/bin/activate
