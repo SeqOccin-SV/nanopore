@@ -1,6 +1,21 @@
 # nanopore
 Pipeline for nanopore-based SV detection
 
+A sample file has to be provided.
+
+- If the alignments are already available, the sample file must be in the following format
+
+| samples | bam            | 
+|---------|----------------|
+| A       | A.bam          |
+
+- Starting with reads, a mapping using minimap will be preformed first, and the smaple file must have the following format
+
+| samples | reads          | 
+|---------|----------------|
+| A       | reads.fastq.gz |
+
+
 Setting up the environment
 ```bash 
 module load bioinfo/minimap2-2.11
