@@ -1,7 +1,7 @@
 
 rule svim:
     input:
-        "mapping/{sample}.bam"
+        get_bam
     output:
         "detectedsv/{sample}/variants.vcf.gz"
     params:

@@ -1,3 +1,5 @@
+
+
 import shutil
 import sys
 import os
@@ -29,6 +31,7 @@ def print_error_exit(message):
            attrs=['bold'], file=sys.stderr)
     os._exit(1)
 
+
 def get_genome(wildcards):
     """ the genome file """
     return config["ref"]["genome"]
@@ -36,8 +39,14 @@ def get_genome(wildcards):
 
 def get_reads(wildcards):
     """Get fastq files of given sample-unit."""
-    reads = samples.loc[wildcards.sample, "reads"]
-    return reads
+    return samples.loc[wildcards.sample, "reads"]
+
+
+def get_bam(wildcards):
+    """Get bam file"""
+    if 'bam' in samples.columns:
+        return samples.loc[wildcards.sample, "bam"]
+    return "mapping/%s.bam" % wildcards.sample
 
 
 def get_read_type(wildcards):
@@ -46,3 +55,12 @@ def get_read_type(wildcards):
     if re.search('(fastq|fq)(\.gz)?$', readfile):
         readtype = "fastq"
     return readtype
+
+
+def get_threads(rule, default):
+    cluster_config = snakemake.workflow.cluster_config
+    if rule in cluster_config and "threads" in cluster_config[rule]:
+        return cluster_config[rule]["threads"]
+    if "default" in cluster_config and "threads" in cluster_config["default"]:
+        return cluster_config["default"]["threads"]
+    return default
