@@ -1,2 +1,2 @@
-sample	bam
-goatA	mapping/goatA.bam
+sample	reads
+goatA	testdata/reads.fastq.gz
