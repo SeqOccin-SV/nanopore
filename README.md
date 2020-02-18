@@ -3,7 +3,7 @@ Pipeline for nanopore-based SV detection
 
 A sample file has to be provided.
 
-- If the alignments are already available, the sample file must be in the following format
+- If the alignments are already available, the sample file must have the following format
 
 | samples | bam            | 
 |---------|----------------|
