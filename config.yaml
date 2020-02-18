@@ -1,0 +1,15 @@
+
+
+# The genome file, gziped or not, absolute or relative parh
+ref:
+  name: test1.0
+  # Path to the reference genome
+  genome: testdata/genome.fa.gz
+
+# A file contaning the list of samples, with header in tabular format
+# sample  reads|bam
+# sample1  sample1.fastq.gz|sample1.bam
+# Here | means either fastqs are provided or bams
+samplefile: samples.tsv
+
+workdir: svdetection
