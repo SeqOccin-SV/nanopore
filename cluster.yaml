@@ -1,0 +1,9 @@
+__default__:
+  mem: 6
+  name: "{rule}.{wildcards}"
+  time: "96:00:00"
+  output: "logs/cluster/{rule}.{wildcards}.out"
+  error: "logs/cluster/{rule}.{wildcards}.err"
+
+minimap:
+  threads: 12

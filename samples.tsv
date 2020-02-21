@@ -1,2 +1,5 @@
+# two formats accepte, either (see README.md)
+# tab delimited file with sample and reads
+# tab delimited file with sample and bam
 sample	reads
-goatA	testdata/reads.fastq.gz
+goat  testdata/reads.fastq.gz
