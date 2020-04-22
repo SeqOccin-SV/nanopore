@@ -31,5 +31,5 @@ done
 ```
 Running the pipeline
 ```bash
-snakemake --jobs 30 --cluster-config cluster.yaml --drmaa " --mem-per-cpu={cluster.mem-per-cpu}}000 --mincpus={threads} --time={cluster.time} -J {cluster.name} -N 1=1" -p -n
+snakemake --jobs 30 --cluster-config cluster.yaml --drmaa " --mem-per-cpu={cluster.mem-per-cpu}000 --mincpus={threads} --time={cluster.time} -J {cluster.name} -N 1=1" -p -n
 ```
