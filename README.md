@@ -15,6 +15,7 @@ A sample file has to be provided.
 |---------|----------------|
 | A       | reads.fastq.gz |
 
+For a sample,  multiple fastq files can be specified as a comma-separated string in the reads column (i.e. reads1.fastq.gz,reads2.fastq.gz[,...])
 
 Setting up the environment
 ```bash
