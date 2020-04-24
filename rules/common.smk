@@ -39,7 +39,8 @@ def get_genome(wildcards):
 
 def get_reads(wildcards):
     """Get fastq files of given sample-unit."""
-    return samples.loc[wildcards.sample, "reads"]
+    reads = samples.loc[wildcards.sample, "reads"]
+    return reads.split(',')
 
 
 def get_bam(wildcards):
