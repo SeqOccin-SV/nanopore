@@ -5,13 +5,13 @@ A sample file has to be provided.
 
 - If the alignments are already available, the sample file must have the following format
 
-| samples | bam            |
+| sample | bam            |
 |---------|----------------|
 | A       | A.bam          |
 
 - Starting with reads, a mapping using minimap will be preformed first, and the sample file must have the following format
 
-| samples | reads          |
+| sample | reads          |
 |---------|----------------|
 | A       | reads.fastq.gz |
 
