@@ -9,7 +9,7 @@ A sample file has to be provided.
 |---------|----------------|
 | A       | A.bam          |
 
-- Starting with reads, a mapping using minimap will be preformed first, and the smaple file must have the following format
+- Starting with reads, a mapping using minimap will be preformed first, and the sample file must have the following format
 
 | samples | reads          |
 |---------|----------------|
